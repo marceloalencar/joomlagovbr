@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="plugin" group="sampledata" method="upgrade">
+	<name>plg_sampledata_egov</name>
+	<author>Marcelo Alencar</author>
+	<creationDate>Outubro 2026</creationDate>
+	<version>1.0.0</version>
+	<description>PLG_SAMPLEDATA_EGOV_XML_DESCRIPTION</description>
+	<namespace path="src">Joomla\Plugin\SampleData\Egov</namespace>
+	<files>
+		<folder>data</folder>
+		<folder>language</folder>
+		<folder plugin="egov">services</folder>
+		<folder>src</folder>
+	</files>
+	<languages>
+		<language tag="pt-BR">language/pt-BR/pt-BR.plg_sampledata_egov.ini</language>
+		<language tag="pt-BR">language/pt-BR/pt-BR.plg_sampledata_egov.sys.ini</language>
+	</languages>
+</extension>
