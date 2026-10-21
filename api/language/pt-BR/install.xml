@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension client="api" type="language" method="upgrade">
+	<name>Brazilian Portuguese (pt-BR)</name>
+	<tag>pt-BR</tag>
+	<version>6.0.3</version>
+	<creationDate>Fevereiro 2026</creationDate>
+	<author>Projeto Joomla!</author>
+	<authorEmail>kazuo@totallnet.com.br</authorEmail>
+	<authorUrl>www.joomla.org</authorUrl>
+	<copyright>Copyright (C) 2021 Open Source Matters. Todos os direitos reservados.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<description><![CDATA[<div style="text-align: left;">
+ <h2>Tradução Português Brasileiro (pt-BR) para Joomla! 6.0.3.1 instalada com sucesso!</h2>
+ <h3>Versão 6.0.3.1</h3>
+ <p>Por favor, informe qualquer problema ou assunto relacionado encontrado, na página <a href="https://www.facebook.com/groups/traduzjoomla/" target="_blank">Grupo Traduções Joomla pt-BR</a> no Facebook.</p>
+ <p>Traduzido pela <em>Equipe de Tradução Português Brasileiro</em>.</p>
+</div>]]></description>
+	<files>
+		<folder>/</folder>
+		<filename file="meta">install.xml</filename>
+	</files>
+	<params/>
+</extension>

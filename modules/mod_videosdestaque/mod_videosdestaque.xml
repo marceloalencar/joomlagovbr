@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="6.0"
+	client="site"
+	method="upgrade">
+	<name>Módulo de Exibição de Destaques de Vídeo</name>
+	<author>Comunidade Joomla Calango e Grupo de Trabalho de Ministérios</author>
+	<creationDate>Março 2015</creationDate>
+	<copyright>Copyright (C) 2015 Comunidade Joomla Calango</copyright>
+	<license>GNU General Public License version 2</license>
+	<authorEmail>rafaelberlanda@gmail.com</authorEmail>
+	<authorUrl>https://github.com/joomlagovbr</authorUrl>
+	<version>6.0.0</version>
+	<description>Módulo que exibe destaques de video</description>
+	<files>
+		<filename module="mod_videosdestaque">mod_videosdestaque.php</filename>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_videosdestaque.xml</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/modules/mod_videosdestaque/fields">
+				<field name="list_videos"
+					type="subform"
+					description="Informe itens caso a requisição seja feita manualmente."
+					label="Lista manual de itens"
+					default="{&quot;url&quot;:[&quot;&quot;],&quot;name&quot;:[&quot;&quot;],&quot;description&quot;:[&quot;&quot;]}"
+					multiple="true"
+					max="3"
+					layout="joomla.form.field.subform.repeatable-table"
+					>
+					
+					<form>
+						<fieldset hidden="true" name="list_videos_modal" repeat="true">
+							<field name="url"
+								label="URL do vídeo"
+								size="30"
+								type="textarea"
+								required="true" />
+							<field name="name"
+								label="Título"
+								size="30"
+								type="textarea"
+								required="true" />
+							<field name="description"
+								label="Descrição do vídeo"
+								size="30"
+								type="textarea" rows="8" />
+							<field name="original"
+								type="hidden" />
+						</fieldset>
+					</form>
+				</field>
+				<field
+					name="text_link_footer"
+					type="text"
+					default=""
+					label="Texto do link de rodapé"
+					description="Texto exibido no link de rodapé."
+					size="35"
+				/>
+
+				<field
+					name="url_link_footer"
+					type="text"
+					default=""
+					size="45"
+					label="URL externa do rodapé"
+					description="Informe uma URL completa. Utilize {SITE} para o endereço base do site."
+				/>
+				<field
+					name="url_link_footer_menu"
+					type="menuitem"
+					default=""
+					label="ou item de menu para o rodapé"
+					description="Selecione um item de menu interno como destino do link."
+				>
+					<option value="">JNONE</option>
+				</field>
+				<field
+					name="url_link_footer_article"
+					type="modal_article"
+					select="true"
+					new="false"
+					edit="false"
+					clear="true"
+					label="ou artigo para o rodapé"
+					description="Selecione um artigo interno como destino do link."
+				/>
+
+			</fieldset>
+			<fieldset
+				name="advanced">
+				<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="limitar_caracteres"
+					type="text"
+					label="Valor padrão para limitar caracteres"
+					default="120" />
+
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
